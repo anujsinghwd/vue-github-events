@@ -6,6 +6,11 @@ var githubTimeline = new Vue({
         input: '',
         fullscreenLoading: true
     },
+    filters: {
+      formatDate: function (v) {
+        return v.replace(/T|Z/g, ' ')
+      }
+    },
     mounted: function(){
         let events = this.apiCall('anujsinghwd');
         events.then(res => {
@@ -24,8 +29,7 @@ var githubTimeline = new Vue({
         },
         apiCall: async function(user){
             const response = await axios.get(`https://api.github.com/users/${user}/events`);
-            const data = response.data;
-            return data;
+            return response.data;
         },
         errNotification: function(title, mssg){
             this.$notify.error({

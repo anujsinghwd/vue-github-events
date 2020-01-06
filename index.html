@@ -29,7 +29,7 @@
                                 </el-avatar>
                             </div>
                         </template>
-                        <p>{{ timeline.actor.display_login }} committed at {{  timeline.created_at }}</p>
+                        <p>{{ timeline.actor.display_login }} committed at <span class="date">{{  timeline.created_at | | formatDate }}</span></p>
                     </el-card>
                 </el-timeline-item>
             </el-timeline>
