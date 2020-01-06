@@ -1,5 +1,9 @@
 ## Github Events Timeline Using Vue.js
 
+## Preview
+
+![Preview](gif/vue-events.gif)
+
 ## To see how it's work
 
 - Fork and star this repo**
